@@ -1,0 +1,72 @@
+0 silly input [ 'serve' ]
+1 silly flags { _: [ 'run' ],
+1 silly flags   stream: true,
+1 silly flags   scope: '@croud/shell',
+1 silly flags   script: 'serve',
+1 silly flags   args: [] }
+2 verbose rootPath /Users/brock/workspace/single-spa-app
+3 info version 2.1.2
+4 silly existsSync /Users/brock/workspace/single-spa-app/VERSION
+5 info scope @croud/shell
+6 silly initialize attempt
+7 silly initialize success
+8 silly execute attempt
+9 silly runScriptInPackageStreaming [ 'serve', [], '@croud/shell' ]
+10 silly getExecOpts { cwd: '/Users/brock/workspace/single-spa-app/packages/shell' }
+11 error execute Error: Command failed: npm run serve
+11 error execute sh: vue-cli-service: command not found
+11 error execute npm ERR! code ELIFECYCLE
+11 error execute npm ERR! syscall spawn
+11 error execute npm ERR! file sh
+11 error execute npm ERR! errno ENOENT
+11 error execute npm ERR! @croud/shell@0.1.0 serve: `vue-cli-service serve`
+11 error execute npm ERR! spawn ENOENT
+11 error execute npm ERR!
+11 error execute npm ERR! Failed at the @croud/shell@0.1.0 serve script.
+11 error execute npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+11 error execute
+11 error execute npm ERR! A complete log of this run can be found in:
+11 error execute npm ERR!     /Users/brock/.npm/_logs/2021-01-13T17_48_17_404Z-debug.log
+11 error execute
+11 error execute
+11 error execute > @croud/shell@0.1.0 serve /Users/brock/workspace/single-spa-app/packages/shell
+11 error execute > vue-cli-service serve
+11 error execute
+11 error execute
+11 error execute     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
+11 error execute     at process._tickCallback (internal/process/next_tick.js:68:7)
+11 error execute  callback with error
+11 error execute  { Error: Command failed: npm run serve
+11 error execute sh: vue-cli-service: command not found
+11 error execute npm ERR! code ELIFECYCLE
+11 error execute npm ERR! syscall spawn
+11 error execute npm ERR! file sh
+11 error execute npm ERR! errno ENOENT
+11 error execute npm ERR! @croud/shell@0.1.0 serve: `vue-cli-service serve`
+11 error execute npm ERR! spawn ENOENT
+11 error execute npm ERR!
+11 error execute npm ERR! Failed at the @croud/shell@0.1.0 serve script.
+11 error execute npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+11 error execute
+11 error execute npm ERR! A complete log of this run can be found in:
+11 error execute npm ERR!     /Users/brock/.npm/_logs/2021-01-13T17_48_17_404Z-debug.log
+11 error execute
+11 error execute
+11 error execute > @croud/shell@0.1.0 serve /Users/brock/workspace/single-spa-app/packages/shell
+11 error execute > vue-cli-service serve
+11 error execute
+11 error execute
+11 error execute     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
+11 error execute     at process._tickCallback (internal/process/next_tick.js:68:7)
+11 error execute   stack:
+11 error execute    'Error: Command failed: npm run serve\nsh: vue-cli-service: command not found\nnpm ERR! code ELIFECYCLE\nnpm ERR! syscall spawn\nnpm ERR! file sh\nnpm ERR! errno ENOENT\nnpm ERR! @croud/shell@0.1.0 serve: `vue-cli-service serve`\nnpm ERR! spawn ENOENT\nnpm ERR! \nnpm ERR! Failed at the @croud/shell@0.1.0 serve script.\nnpm ERR! This is probably not a problem with npm. There is likely additional logging output above.\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /Users/brock/.npm/_logs/2021-01-13T17_48_17_404Z-debug.log\n\n\n> @croud/shell@0.1.0 serve /Users/brock/workspace/single-spa-app/packages/shell\n> vue-cli-service serve\n\n\n    at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)\n    at process._tickCallback (internal/process/next_tick.js:68:7)',
+11 error execute   code: 1,
+11 error execute   killed: false,
+11 error execute   stdout:
+11 error execute    '\n> @croud/shell@0.1.0 serve /Users/brock/workspace/single-spa-app/packages/shell\n> vue-cli-service serve\n\n',
+11 error execute   stderr:
+11 error execute    'sh: vue-cli-service: command not found\nnpm ERR! code ELIFECYCLE\nnpm ERR! syscall spawn\nnpm ERR! file sh\nnpm ERR! errno ENOENT\nnpm ERR! @croud/shell@0.1.0 serve: `vue-cli-service serve`\nnpm ERR! spawn ENOENT\nnpm ERR! \nnpm ERR! Failed at the @croud/shell@0.1.0 serve script.\nnpm ERR! This is probably not a problem with npm. There is likely additional logging output above.\n\nnpm ERR! A complete log of this run can be found in:\nnpm ERR!     /Users/brock/.npm/_logs/2021-01-13T17_48_17_404Z-debug.log\n',
+11 error execute   failed: true,
+11 error execute   signal: null,
+11 error execute   cmd: 'npm run serve',
+11 error execute   timedOut: false }
