@@ -98,7 +98,7 @@ a {
 } 
 
 .content {
-  height: calc(100vh - 50px);
+  height: calc(100vh - 50px - 60px);
   grid-area: content;
   margin-top: 60px;
   overflow-y: scroll;
