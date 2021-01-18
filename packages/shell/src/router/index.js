@@ -1,25 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: () => import('shell/views/Home')
-  },
-  {
-    path: '/app',
-    name: 'App',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('foo/views/Page')
-  }
-]
+export default async function buildRouter() {
+  const { routes: fooRoutes } = await import('foo/router')
 
-const router = createRouter({
-  history: createWebHistory('/'),
-  routes
-  // base: 'http:localhos1t:8080/'
-})
+  const routes = [
+    {
+      path: '/',
+      name: 'Home',
+      component: () => import('shell/views/Home')
+    },
+    ...fooRoutes
+  ]
 
-export default router
+  return createRouter({
+    history: createWebHistory('/'),
+    routes
+  })
+}

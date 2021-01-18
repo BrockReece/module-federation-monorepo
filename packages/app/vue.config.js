@@ -14,7 +14,7 @@ module.exports = {
                     styleguide: 'styleguide@https://unpkg.com/@brockreece/test-styleguide@0.1.1/dist/remoteEntry.js',
                 },
                 exposes: {
-                    './views/Page': './src/views/Page'
+                    './router': './src/router/index'
                 },
                 shared: ['vue', 'core-js', 'vue-router', 'styleguide']
             })
