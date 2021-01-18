@@ -4,6 +4,7 @@
         <div>
             <Btn v-if="user" @click="logout">logout</Btn>
         </div>
+        <Countries />
     </div>
 </template>
 
@@ -12,9 +13,12 @@ import { defineAsyncComponent } from 'vue'
 import { useCurrentUser } from 'shell/compositions/user'
 
 const Btn = defineAsyncComponent(() => import("styleguide/Btn"))
+const Countries = defineAsyncComponent(() => import("shell/components/Countries"));
+
 export default {
     components: {
-        Btn
+        Btn,
+        Countries
     },
 
     setup() {

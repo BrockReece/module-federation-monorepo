@@ -6,19 +6,24 @@
       <Btn v-else @click="login({ name: 'foo' })">Login</Btn>
     </div>
     {{ user }}
+
+    <Countries />
   </div>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
 import { useCurrentUser } from 'shell/compositions/user'
+
 const Btn = defineAsyncComponent(() => import("styleguide/Btn"));
+const Countries = defineAsyncComponent(() => import("shell/components/Countries"));
 
 export default {
   name: 'Home',
 
   components: {
-    Btn
+    Btn,
+    Countries
   },
 
   setup() {

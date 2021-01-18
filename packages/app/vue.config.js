@@ -16,7 +16,7 @@ module.exports = {
                 exposes: {
                     './router': './src/router/index'
                 },
-                shared: ['vue', 'core-js', 'vue-router', 'styleguide']
+                shared: ['vue', 'core-js', 'vue-router', 'styleguide', '@vue/apollo-composable', 'graphql', '@apollo/client']
             })
         ]
     }

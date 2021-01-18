@@ -17,9 +17,10 @@ module.exports = {
                     './App': './src/App.vue',
                     './Router': './src/router/index',
                     './views/Home': './src/views/Home',
-                    './compositions/user': './src/compositions/user'
+                    './compositions/user': './src/compositions/user',
+                    './components/Countries': './src/components/Countries'
                 },
-                shared: [ 'vue', 'core-js', 'vue-router', 'styleguide' ]
+                shared: [ 'vue', 'core-js', 'vue-router', 'styleguide', '@vue/apollo-composable', 'graphql', '@apollo/client' ]
             })
         ]
     }
