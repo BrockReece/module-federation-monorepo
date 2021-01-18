@@ -10,8 +10,7 @@ module.exports = {
                 remotes: {
                     shell: "shell@http://localhost:8080/remoteEntry.js",
                     foo: "foo@http://localhost:8081/remoteEntry.js",
-                    styleguide: "styleguide@https://unpkg.com/@brockreece/test-styleguide@0.1.1/dist/remoteEntry.js",
-                    styleguideNew: 'styleguide@https://unpkg.com/@brockreece/test-styleguide/dist/remoteEntry.js'
+                    styleguide: "styleguide@https://unpkg.com/@brockreece/test-styleguide@0.1.1/dist/remoteEntry.js"
                 },
                 exposes: {
                     './App': './src/App.vue',
