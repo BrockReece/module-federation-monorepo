@@ -1,6 +1,6 @@
-import { createApp } from 'vue'
+import { defineAsyncComponent, createApp } from 'vue'
 import router from './router'
-import App from './App.vue'
+const App = defineAsyncComponent(() => import('shell/App'))
 
 const create = async () => {
     createApp(App)
