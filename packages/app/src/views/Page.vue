@@ -11,7 +11,7 @@
 import { defineAsyncComponent } from 'vue'
 import { useCurrentUser } from 'shell/compositions/user'
 
-const Btn = defineAsyncComponent(() => import("styleguideNew/Btn"))
+const Btn = defineAsyncComponent(() => import("styleguide/Btn"))
 export default {
     components: {
         Btn

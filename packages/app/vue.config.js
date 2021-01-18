@@ -12,10 +12,8 @@ module.exports = {
                     foo: "foo@http://localhost:8081/remoteEntry.js",
                     shell: "shell@http://localhost:8080/remoteEntry.js",
                     styleguide: 'styleguide@https://unpkg.com/@brockreece/test-styleguide@0.1.1/dist/remoteEntry.js',
-                    styleguideNew: 'styleguide@https://unpkg.com/@brockreece/test-styleguide/dist/remoteEntry.js'
                 },
                 exposes: {
-                    './components/Brock': './src/components/Brock',
                     './views/Page': './src/views/Page'
                 },
                 shared: ['vue', 'core-js', 'vue-router', 'styleguide']
