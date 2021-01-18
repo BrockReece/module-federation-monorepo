@@ -14,7 +14,14 @@
       </ul>
     </nav>
     <div class="content">
-      <router-view />
+      <Suspense>
+        <template #default>
+          <router-view />
+        </template>
+        <template #fallback>
+          <span>...Loading</span>
+        </template>
+      </Suspense>
     </div>
   </div>
     
