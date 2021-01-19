@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve --port 8081",
     "build": "vue-cli-service build",
-    "start": "vue-cli-service build && npx serve dist -l 8081",
+    "start": "vue-cli-service build && npx servor dist index.html 8081",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
