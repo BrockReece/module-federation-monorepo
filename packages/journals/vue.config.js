@@ -10,7 +10,7 @@ module.exports = {
                 filename: "remoteEntry.js",
                 remotes: {
                     journals: `journals@${process.env.JOURNAL_BASE}remoteEntry.js`,
-                    styleguideNew: `styleguide@${process.env.STYLEGUIDE_BASE}remoteEntry.js`
+                    styleguide: `styleguide@${process.env.STYLEGUIDE_BASE}remoteEntry.js`
                 },
                 exposes: {
                     './views/Journals': './src/views/Journals',
