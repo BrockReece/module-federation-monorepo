@@ -18,6 +18,10 @@ export default async function buildRouter() {
       component: () => import('journals/views/Journals').catch(() => ComponentError)
     },
     ...fooRoutes,
+    { 
+      path: '/:pathMatch(.*)*', 
+      component: ComponentError 
+    }
   ]
 
   return createRouter({
