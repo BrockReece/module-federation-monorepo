@@ -1,11 +1,8 @@
-import { createApp, defineAsyncComponent } from 'vue'
+import { createApp } from 'vue'
+import App from './App'
+import router from './router'
 
-const App = defineAsyncComponent(() => import('shell/App'))
 
-const create = async () => {
-    const router = await import('shell/Router')
-    createApp(App)
-        .use(await router.default())
-        .mount('#app')
-}
-create()
+createApp(App)
+    .use(router)
+    .mount('#app')

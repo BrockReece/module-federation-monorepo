@@ -10,12 +10,12 @@ module.exports = {
                 filename: "remoteEntry.js",
                 remotes: {
                     journals: "journals@http://localhost:8084/remoteEntry.js",
-                    shell: "shell@http://localhost:8080/remoteEntry.js",
                     styleguide: 'styleguide@https://unpkg.com/@brockreece/test-styleguide@0.1.1/dist/remoteEntry.js',
                 },
                 exposes: {
-                    './router': './src/router/index',
-                    './components/AddJournalButton': './src/components/AddJournalButton'
+                    './views/Journals': './src/views/Journals',
+                    './components/AddJournalButton': './src/components/AddJournalButton',
+                    './compositions/journals': './src/compositions/journals'
                 },
                 shared: ['vue', 'core-js', 'vue-router', 'styleguide']
             })
