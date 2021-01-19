@@ -1,17 +1,17 @@
 const { ModuleFederationPlugin } = require("webpack").container
 
 module.exports = {
-    publicPath: 'http://localhost:8080/',
+    publicPath: process.env.SHELL_BASE,
     configureWebpack: {
         plugins: [
             new ModuleFederationPlugin({
                 name: "shell",
                 filename: "remoteEntry.js",
                 remotes: {
-                    shell: "shell@http://localhost:8080/remoteEntry.js",
-                    foo: "foo@http://localhost:8081/remoteEntry.js",
-                    journals: "journals@http://localhost:8084/remoteEntry.js",
-                    styleguide: "styleguide@https://unpkg.com/@brockreece/test-styleguide@0.1.1/dist/remoteEntry.js"
+                    shell: `shell@${process.env.SHELL_BASE}remoteEntry.js`,
+                    foo: `foo@${process.env.APP_BASE}remoteEntry.js`,
+                    styleguide: `styleguide@${process.env.STYLEGUIDE_BASE}remoteEntry.js`,
+                    journals: "journals@http://localhost:8084/remoteEntry.js"
                 },
                 exposes: {
                     './App': './src/App.vue',

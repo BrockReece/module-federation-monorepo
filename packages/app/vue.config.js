@@ -2,16 +2,16 @@ const { ModuleFederationPlugin } = require("webpack").container;
 const deps = require("./package.json").dependencies;
 
 module.exports = {
-    publicPath: 'http://localhost:8081/',
+    publicPath: process.env.APP_BASE,
     configureWebpack: {
         plugins: [
             new ModuleFederationPlugin({
                 name: "foo",
                 filename: "remoteEntry.js",
                 remotes: {
-                    foo: "foo@http://localhost:8081/remoteEntry.js",
-                    shell: "shell@http://localhost:8080/remoteEntry.js",
-                    styleguide: 'styleguide@https://unpkg.com/@brockreece/test-styleguide@0.1.1/dist/remoteEntry.js',
+                    shell: `shell@${process.env.SHELL_BASE}remoteEntry.js`,
+                    foo: `foo@${process.env.APP_BASE}remoteEntry.js`,
+                    styleguide: `styleguide@${process.env.STYLEGUIDE_BASE}remoteEntry.js`
                 },
                 exposes: {
                     './router': './src/router/index'
