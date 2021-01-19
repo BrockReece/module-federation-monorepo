@@ -11,7 +11,7 @@ module.exports = {
                     shell: `shell@${process.env.SHELL_BASE}remoteEntry.js`,
                     foo: `foo@${process.env.APP_BASE}remoteEntry.js`,
                     styleguide: `styleguide@${process.env.STYLEGUIDE_BASE}remoteEntry.js`,
-                    journals: "journals@http://localhost:8084/remoteEntry.js"
+                    journals: `journals@${process.env.JOURNAL_BASE}remoteEntry.js`
                 },
                 exposes: {
                     './App': './src/App.vue',

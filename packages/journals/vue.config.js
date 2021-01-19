@@ -2,15 +2,15 @@ const { ModuleFederationPlugin } = require("webpack").container;
 const deps = require("./package.json").dependencies;
 
 module.exports = {
-    publicPath: 'http://localhost:8084/',
+    publicPath: process.env.JOURNAL_BASE,
     configureWebpack: {
         plugins: [
             new ModuleFederationPlugin({
                 name: "journals",
                 filename: "remoteEntry.js",
                 remotes: {
-                    journals: "journals@http://localhost:8084/remoteEntry.js",
-                    styleguide: 'styleguide@https://unpkg.com/@brockreece/test-styleguide@0.1.1/dist/remoteEntry.js',
+                    journals: `journals@${process.env.JOURNAL_BASE}remoteEntry.js`,
+                    styleguideNew: `styleguide@${process.env.STYLEGUIDE_BASE}remoteEntry.js`
                 },
                 exposes: {
                     './views/Journals': './src/views/Journals',
