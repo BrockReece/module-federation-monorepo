@@ -2,9 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 export default async function buildRouter() {
   const { routes: fooRoutes } = await import('foo/router')
-  const { routes: journalsRoutes } = await import('journals/router').catch(() => ({
-    routes: []
-  })) 
 
   const routes = [
     {
@@ -12,8 +9,12 @@ export default async function buildRouter() {
       name: 'Home',
       component: () => import('shell/views/Home')
     },
+    { 
+      path: '/journals',
+      name: 'Journals',
+      component: () => import('journals/views/Journals')
+    },
     ...fooRoutes,
-    ...journalsRoutes
   ]
 
   return createRouter({
