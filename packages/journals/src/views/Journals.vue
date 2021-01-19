@@ -18,29 +18,19 @@
             </tr>
         </table>
         <div>
-            <Btn>logout</Btn>
+            <AddJournalButton/>
         </div>
     </div>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import { useCurrentUser } from 'shell/compositions/user'
+const AddJournalButton = defineAsyncComponent(() => import("journals/components/AddJournalButton"))
 
-const Btn = defineAsyncComponent(() => import("journals/components/AddJournalButton"))
 export default {
     components: {
-        Btn
-    },
-
-    setup() {
-        const { user, logout } = useCurrentUser()
-        return {
-            logout,
-            user
-        }
+        AddJournalButton
     }
-
 }
 </script>
 
