@@ -6,15 +6,10 @@
             <th>Category</th>
             <th>Minutes</th>
             
-            <tr>
-                <td>Journal 123</td>
-                <td>Test</td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>Journal 321</td>
-                <td>Another</td>
-                <td>200</td>
+            <tr v-for="(journal, i) in journals" :key="i">
+                <td>{{ journal.name }}</td>
+                <td>{{ journal.category }}</td>
+                <td>{{ journal.mins }}</td>
             </tr>
         </table>
         <div>
@@ -25,11 +20,19 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { useJournals } from 'journals/compositions/journals'
 const AddJournalButton = defineAsyncComponent(() => import("journals/components/AddJournalButton"))
 
 export default {
     components: {
         AddJournalButton
+    },
+
+    setup() {
+        const { journals } = useJournals()
+        return {
+            journals
+        }
     }
 }
 </script>
