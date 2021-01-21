@@ -1,14 +1,13 @@
 const { ModuleFederationPlugin } = require("webpack").container;
 
 module.exports = {
-    publicPath: 'https://unpkg.com/@brockreece/test-styleguide@0.1.2/dist/',
+    publicPath: process.env.STYLEGUIDE_BASE,
     configureWebpack: {
         plugins: [
             new ModuleFederationPlugin({
                 name: "styleguide",
                 filename: "remoteEntry.js",
-                remotes: {
-                },
+                remotes: {},
                 exposes: {
                     './Btn': './src/components/Btn'
                 },
