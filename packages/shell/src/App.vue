@@ -11,6 +11,11 @@
         <router-link to="/app">
           <li>App</li>
         </router-link>
+        <router-link to="/journals">
+          <li>Journals</li>
+        </router-link>
+
+        <AddJournalButton></AddJournalButton>
       </ul>
     </nav>
     <div class="content">
@@ -28,9 +33,18 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
+import ComponentError from './components/ComponentError'
+const AddJournalButton = defineAsyncComponent({
+  loader: () => import("journals/components/AddJournalButton"),
+  errorComponent: ComponentError
+})
 
 export default {
   name: 'App',
+  components: {
+    AddJournalButton
+  }
 }
 </script>
 
